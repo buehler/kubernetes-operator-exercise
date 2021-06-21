@@ -9,7 +9,7 @@ spec:
     listKind: WeatherDataList
     plural: weatherdatas
     singular: weatherdata
-  scope: Namespaced
+  scope: Cluster
   versions:
   - additionalPrinterColumns:
     - jsonPath: .spec.mainWeather

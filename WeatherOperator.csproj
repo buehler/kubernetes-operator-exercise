@@ -7,7 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="KubeOps" Version="4.0.23" />
+      <PackageReference Include="Cronos" Version="0.7.1" />
+      <PackageReference Include="KubeOps" Version="4.1.0" />
     </ItemGroup>
 
 </Project>

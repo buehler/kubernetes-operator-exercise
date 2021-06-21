@@ -4,6 +4,27 @@ metadata:
   name: operator-role
 rules:
 - apiGroups:
+  - kubernetes.dev
+  resources:
+  - weatherdatas
+  verbs:
+  - '*'
+- apiGroups:
+  - kubernetes.dev
+  resources:
+  - weatherlocations
+  verbs:
+  - get
+  - list
+- apiGroups:
+  - kubernetes.dev
+  resources:
+  - weatherlocations/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
   - coordination.k8s.io
   resources:
   - leases
@@ -20,6 +41,25 @@ rules:
   - apps
   resources:
   - deployments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ''
+  - admissionregistration.k8s.io
+  resources:
+  - services
+  - validatingwebhookconfigurations
+  verbs:
+  - create
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ''
+  resources:
+  - services/status
   verbs:
   - get
   - patch

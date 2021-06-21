@@ -1,4 +1,5 @@
 ﻿using System;
+using DotnetKubernetesClient.Entities;
 using k8s.Models;
 using KubeOps.Operator.Entities;
 using KubeOps.Operator.Entities.Annotations;
@@ -24,7 +25,13 @@ namespace WeatherOperator.Entities
         ApiVersion = "v1",
         Group = "kubernetes.dev",
         Kind = "WeatherData")]
+    [EntityScope(EntityScope.Cluster)]
     public class V1WeatherData : CustomKubernetesEntity<V1WeatherDataSpec>
     {
+        public V1WeatherData()
+        {
+            Kind = "WeatherData";
+            ApiVersion = "kubernetes.dev/v1";
+        }
     }
 }

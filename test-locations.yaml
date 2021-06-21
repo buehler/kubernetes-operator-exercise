@@ -1,0 +1,23 @@
+﻿apiVersion: kubernetes.dev/v1
+kind: WeatherLocation
+metadata:
+  name: st-gallen
+spec:
+  latitude: 47.422673
+  longitude: 9.369421
+---
+apiVersion: kubernetes.dev/v1
+kind: WeatherLocation
+metadata:
+  name: steinach
+spec:
+  latitude: 47.501956
+  longitude: 9.446960
+---
+apiVersion: kubernetes.dev/v1
+kind: WeatherLocation
+metadata:
+  name: zuerich
+spec:
+  latitude: 47.377356
+  longitude: 8.539495
